@@ -1,6 +1,6 @@
 class Month < ApplicationRecord
 
-
+  before_save :date_to_month_start
 
   has_many :sales
 
@@ -8,11 +8,14 @@ class Month < ApplicationRecord
 
   validates :date, uniqueness: true
   validates :sales_plan, inclusion: { in: 1..99999999999 ,
-            message: "%{value} can't be less 1 and more 99999999999" }
+            message: "(%{value}) can't be less 1 and more 99999999999" }
 
   validates :price_index, numericality: { greater_than_or_equal_to: 0.00001, less_than_or_equal_to: 99999999999}
 
   private
 
+  def date_to_month_start
+    self.date = self.date.end_of_month
+  end
 
 end
