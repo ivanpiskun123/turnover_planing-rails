@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_01_150958) do
+ActiveRecord::Schema.define(version: 2021_08_01_201115) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 2021_08_01_150958) do
   create_table "sales", force: :cascade do |t|
     t.integer "amount"
     t.string "total_sum"
-    t.boolean "payment_method"
-    t.boolean "trade_form"
+    t.boolean "payment_method", default: false
+    t.boolean "trade_form", default: false
     t.bigint "month_id"
     t.bigint "product_id"
     t.datetime "created_at", precision: 6, null: false
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2021_08_01_150958) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "name"
-    t.boolean "admin"
+    t.boolean "admin", default: false
     t.datetime "remember_created_at"
     t.integer "sign_in_count", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
