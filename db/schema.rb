@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_01_201115) do
+ActiveRecord::Schema.define(version: 2021_08_01_223012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,15 +39,17 @@ ActiveRecord::Schema.define(version: 2021_08_01_201115) do
 
   create_table "sales", force: :cascade do |t|
     t.integer "amount"
-    t.string "total_sum"
     t.boolean "payment_method", default: false
     t.boolean "trade_form", default: false
     t.bigint "month_id"
     t.bigint "product_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "total_sum"
+    t.bigint "user_id"
     t.index ["month_id"], name: "index_sales_on_month_id"
     t.index ["product_id"], name: "index_sales_on_product_id"
+    t.index ["user_id"], name: "index_sales_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

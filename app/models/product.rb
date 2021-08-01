@@ -4,4 +4,5 @@ class Product < ApplicationRecord
   has_many :sales
 
     validates :name, length: {minimum: 2}
+
 end

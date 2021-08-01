@@ -4,6 +4,9 @@ class Sale < ApplicationRecord
  belongs_to :month
  belongs_to :product
 
+ validates :total_sum, presence: true
+ validates :amount, presence: true
+
  validates :amount, inclusion: { in: 1..99999999999 ,
            message: "(%{value}) can't be less 1 and more 99999999999" }
 
@@ -11,11 +14,11 @@ class Sale < ApplicationRecord
            message: "(%{value}) can't be less 1 and more 99999999999" }
 
  def payment_method_to_s
-    self.payment_method? "Наличными" : "Эл. перевод"
+    self.payment_method ? "Наличными" : "Эл. перевод"
  end
 
  def trade_form_to_s
-    self.trade_form? "Опт" : "Розн"
+    self.trade_form ? "Опт" : "Розн"
  end
 
 end
