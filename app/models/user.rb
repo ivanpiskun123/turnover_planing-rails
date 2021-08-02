@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_many :sales
 
   validates :name, uniqueness: true
-
+  validates :name, presence: true
 end

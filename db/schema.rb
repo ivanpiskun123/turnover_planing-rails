@@ -58,6 +58,10 @@ ActiveRecord::Schema.define(version: 2021_08_01_223012) do
     t.string "name"
     t.boolean "admin", default: false
     t.datetime "remember_created_at"
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
     t.integer "sign_in_count", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
