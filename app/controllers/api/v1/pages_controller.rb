@@ -1,43 +1,38 @@
-module Api
-  module V1
-    class PagesController < ApplicationController
+class Api::V1::PagesController < ApplicationController
 
-      def home
-      end
+        def home
+              render :text => "OK"
+       end
 
-      def dynamic_plan_execution
+       def dynamic_plan_execution
 
-      end
+       end
 
-      def dynamic_indexed_sales
+       def dynamic_indexed_sales
 
-      end
+       end
 
-      def product_group_structure
+       def product_group_structure
 
-      end
+       end
 
-      def payment_method_sctructure
+       def payment_method_sctructure
 
-      end
+       end
 
-      def trade_form_sctructure
+       def trade_form_sctructure
 
-      end
+       end
 
-      def seasonality
+       def seasonality
 
-      end
+       end
 
-      def average_prices
+       def average_prices
 
-      end
+       end
 
-      private
-
+       private
 
 
-    end
-
-  end
 end

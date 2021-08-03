@@ -6,8 +6,8 @@ class Month < ApplicationRecord
   scope :previous_month, ->(month) { where(date: (month.date-1.month).end_of_month  ) }
 
   before_save :date_to_month_start
-
-  has_many :sales
+  
+  has_many :sales, depent: :destroy
 
   validates :date, :sales_plan, :price_index, presence: true
 

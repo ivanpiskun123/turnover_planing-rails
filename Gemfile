@@ -33,9 +33,8 @@ gem 'rails_admin_rollincode', '~> 1.0'
 gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
 
 gem 'fast_jsonapi'
-
 gem 'semantic-ui-sass'
-
+gem "graphql", "~> 1.12"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -60,3 +59,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "graphiql-rails", "~> 1.7"

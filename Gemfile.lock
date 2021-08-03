@@ -112,6 +112,10 @@ GEM
     ffi (1.15.3-x64-mingw32)
     globalid (0.5.1)
       activesupport (>= 5.0)
+    graphiql-rails (1.7.0)
+      railties
+      sprockets-rails
+    graphql (1.12.14)
     haml (5.2.2)
       temple (>= 0.8.0)
       tilt
@@ -267,6 +271,8 @@ DEPENDENCIES
   capybara (>= 3.26)
   devise
   fast_jsonapi
+  graphiql-rails (~> 1.7)
+  graphql (~> 1.12)
   jbuilder (~> 2.7)
   pg (~> 1.1)
   puma (~> 5.0)
