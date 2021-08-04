@@ -54,6 +54,9 @@ class Month < ApplicationRecord
     (  self.sales.to_a.sum(&:product_unit_price)  / self.sales.count).round(2)
   end
 
+  def russian_name_of_month
+    Months::RussianMonths.new(self.date.month-1).call
+  end
 
   private
 

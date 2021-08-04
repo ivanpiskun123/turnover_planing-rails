@@ -1,7 +1,7 @@
 module Types
   class DynamicIndexedSalesType < Types::BaseObject
-    field :id, ID, null: false
     field :month_number, Integer, null: false
+    field :russian_name_of_month, String, null: false
     field :sales_sum, Integer, null: false
     field :price_index, Float, null: false
     field :sales_sum_indexed, Float, null: false
