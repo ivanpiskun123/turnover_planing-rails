@@ -39,7 +39,10 @@ module Types
       description "Query that retrieves data for average prices report"
     end
 
-
+    field :abc_product_analysis, GraphQL::Types::JSON, null: false do
+      argument :year, String, required: true
+      description "Query that retrieves data for abc-product analysis report"
+    end
 
 
     def dynamic_plan_execution(year:)
@@ -75,6 +78,33 @@ module Types
         get_months_of_specific_year(year)
     end
 
+    def abc_product_analysis(year:)
+      total_sales_sum_by_year = Sale.of_specific_year_to_array(year).sum(&:total_sum)
+
+      product_ordered_by_sales =  Product.all.to_a.sort { |a,b|  a.sales_sum_by_year(year) <=> b.sales_sum_by_year(year)   }
+      product_ordered_by_sales = product_ordered_by_sales.reverse()
+      additional_part = 0.0
+      abc_product_data = []
+
+      product_ordered_by_sales.each_with_index do |p, idx|
+          sales_sum_product = p.sales_sum_by_year(year)
+          part = sales_sum_product.to_f/total_sales_sum_by_year.to_f
+          additional_part += part
+
+          case additional_part
+            when 0.0 .. 0.8
+              group = "A"
+            when 0.8 .. 0.95
+              group = "B"
+            when 0.95 .. 100.0
+              group = "C"
+          end
+
+          abc_product_data << [idx+1, p.name, sales_sum_product , (part.round(2))*100, group]
+        end
+
+        abc_product_data
+    end
 
 
     # helper methods

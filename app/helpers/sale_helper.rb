@@ -6,5 +6,4 @@ module SaleHelper
   def trade_form_to_s
     sale.trade_form ? "Опт" : "Розн"
   end
-
 end

@@ -32,6 +32,10 @@ class Api::V1::PagesController < ApplicationController
 
        end
 
+       def abs_product_analysis
+
+       end
+
        private
 
 

@@ -13,4 +13,6 @@ class Product < ApplicationRecord
       self.sales.of_specific_year_to_array(year).to_a.sum(&:total_sum)
     end
 
+
+
 end
