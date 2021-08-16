@@ -9,12 +9,25 @@ import App from '../components/App'
 import { BrowserRouter as Router, Route} from 'react-router-dom'
 
 
+import Provider from '../components/Provider';
+import About from '../components/About/About';
+
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Router>
-        <Route  path="/" component={App} />
-    </Router>
-    ,
-    document.body.appendChild(document.createElement('div')),
-  )
+        <Provider>
+          <About />
+        </Provider>,
+      document.body.appendChild(document.createElement('div'))
+      );
+
 })
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   ReactDOM.render(
+//     <Router>
+//         <Route  path="/" component={App} />
+//     </Router>
+//     ,
+//     document.body.appendChild(document.createElement('div')),
+//   )
+// })

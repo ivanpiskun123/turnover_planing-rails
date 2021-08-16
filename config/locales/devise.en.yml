@@ -1,6 +1,22 @@
 # Additional translations at https://github.com/heartcombo/devise/wiki/I18n
 
 en:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              confirmation: " (пароль) не совпадает"
+              too_short: " (пароль) слишком короткий (минимум %{count} символов)"
+              blank: " (пароль) не может быть пустым"
+            username:
+              blank: " (имя пользователя) не может быть пустым"
+            email:
+              blank: " не может быть пустым"
+              invalid: "- адрес введён неправильно"
+            password_confirmation:
+              confirmation: " : подтверждение пароля не совпадает c паролем"
   devise:
     confirmations:
       confirmed: "Your email address has been successfully confirmed."
@@ -61,5 +77,5 @@ en:
       not_found: "not found"
       not_locked: "was not locked"
       not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        one: "1 ошибка мешает созданию %{resource}:"
+        other: "%{count} ошибок мешает созданию %{resource}:"
