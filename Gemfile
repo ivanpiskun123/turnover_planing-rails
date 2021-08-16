@@ -65,3 +65,6 @@ gem "graphql", "~> 1.12"
 gem "graphiql-rails", "~> 1.7"
 
 gem 'devise-semantified', git: 'https://github.com/ajex13/devise-semantified.git'
+gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
+
+gem 'rack-cors'

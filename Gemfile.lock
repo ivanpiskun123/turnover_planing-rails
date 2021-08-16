@@ -5,6 +5,13 @@ GIT
     devise-semantified (0.1.2)
 
 GIT
+  remote: https://github.com/doabit/semantic-ui-sass.git
+  revision: b5266bddd7f048695c81f0e00bdd3d6b099b1d7f
+  specs:
+    semantic-ui-sass (2.4.4.0)
+      sassc
+
+GIT
   remote: https://github.com/sferik/rails_admin.git
   revision: 219333b301e4cb845e947c4bb33892bf0a566129
   specs:
@@ -168,6 +175,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-mini-profiler (2.3.2)
       rack (>= 1.2.0)
     rack-pjax (1.1.0)
@@ -281,12 +290,14 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   pg (~> 1.1)
   puma (~> 5.0)
+  rack-cors
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4)
   rails_admin!
   rails_admin_rollincode (~> 1.0)
   sass-rails (>= 6)
   selenium-webdriver
+  semantic-ui-sass!
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
