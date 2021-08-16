@@ -12,6 +12,3 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-
-import '@doabit/semantic-ui-sass'
-import '@doabit/semantic-ui-sass/src/scss/semantic-ui.scss'

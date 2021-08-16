@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/ajex13/devise-semantified.git
+  revision: 0724fc3bda333d7540f28e1fd60774e116d6fc9c
+  specs:
+    devise-semantified (0.1.2)
+
+GIT
   remote: https://github.com/sferik/rails_admin.git
   revision: 219333b301e4cb845e947c4bb33892bf0a566129
   specs:
@@ -219,8 +225,6 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
-    semantic-ui-sass (2.4.4.0)
-      sassc
     semantic_range (3.0.0)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -270,6 +274,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise
+  devise-semantified!
   fast_jsonapi
   graphiql-rails (~> 1.7)
   graphql (~> 1.12)
@@ -282,7 +287,6 @@ DEPENDENCIES
   rails_admin_rollincode (~> 1.0)
   sass-rails (>= 6)
   selenium-webdriver
-  semantic-ui-sass
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)

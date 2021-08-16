@@ -26,15 +26,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.4', require: false
 
-gem 'devise'
-gem 'rails_admin_rollincode', '~> 1.0'
-gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
-
-gem 'fast_jsonapi'
-gem 'semantic-ui-sass'
-gem "graphql", "~> 1.12"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -60,4 +52,16 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+
+gem 'bootsnap', '>= 1.4.4', require: false
+
+gem 'devise'
+gem 'rails_admin_rollincode', '~> 1.0'
+gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
+
+gem 'fast_jsonapi'
+
+gem "graphql", "~> 1.12"
 gem "graphiql-rails", "~> 1.7"
+
+gem 'devise-semantified', git: 'https://github.com/ajex13/devise-semantified.git'
