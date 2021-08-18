@@ -8,12 +8,30 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'index' %>
+
   </head>
 
   <body style="background: #6B3759; background: -webkit-linear-gradient(#6B3759, #3E3C6B); background:    -moz-linear-gradient(#6B3759, #3E3C6B); background: linear-gradient(#6B3759, #3E3C6B);">
 
-          <%= yield %>
+      <%#    <% if current_user %>
+      <%#        <%= javascript_pack_tag 'index' %>
+      <%#        <%= content_tag :div,
+                id: "current_user_data",
+                data: current_user.to_json do %>
+      <%#        <% end %>
+    <%#      <% else %>
+
+    <%#      <% end %>
+
+    <% if current_user %>
+      <%= render partial: 'shared/navigation' %>
+      <%= yield %>
+    <% end %>
+
+
+  <%= yield %>
+
+
 
 
   </body>

@@ -44,6 +44,14 @@ module Types
       description "Query that retrieves data for abc-product analysis report"
     end
 
+    field :years_list, [Integer], null: false do
+      description "Query that retrieves list of years available in database"
+    end
+
+    field :is_user_admin, Boolean, null: false do
+      description "Query that retrives info about admin roots of current user"
+    end
+
 
     def dynamic_plan_execution(year:)
       get_months_of_specific_year(year)
@@ -115,6 +123,12 @@ module Types
     def get_sales_for_specific_season_and_year(year, season_start_end_month_n)
         Month.where(date: ( Date.parse("1-#{season_start_end_month_n[0]}-#{year}").end_of_month .. Date.parse("1-#{season_start_end_month_n[1]}-#{year}").end_of_month )).to_a.sum(&:sales_sum_indexed)
     end
+
+    def years_list
+        Month.all.to_a.uniq{|m| m.date.year }.map{|m_uniq_year| m_uniq_year.date.year}
+    end
+
+
 
 
   end

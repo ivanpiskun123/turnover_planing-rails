@@ -9,18 +9,25 @@ import App from '../components/App'
 import { BrowserRouter as Router, Route} from 'react-router-dom'
 
 
-import Provider from '../components/Provider';
-import About from '../components/About/About';
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  const node = document.getElementById('current_user_data')
+  const user_data = JSON.parse(node.getAttribute('data'))
+
   ReactDOM.render(
-        <Provider>
-          <About />
-        </Provider>,
+      <Router>
+          <Route  path="/" render={() => <App user_data={user_data}  />}  />
+      </Router>,
       document.body.appendChild(document.createElement('div'))
       );
 
 })
+
+//
+// <Provider>
+//   <About />
+// </Provider>,
 
 // document.addEventListener('DOMContentLoaded', () => {
 //   ReactDOM.render(

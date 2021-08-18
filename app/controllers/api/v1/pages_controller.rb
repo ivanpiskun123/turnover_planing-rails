@@ -4,6 +4,10 @@ class Api::V1::PagesController < ApplicationController
               render :text => "OK"
        end
 
+       def index
+          render :text => "OK"
+       end
+
        def dynamic_plan_execution
 
        end

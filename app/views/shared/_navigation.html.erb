@@ -1,0 +1,59 @@
+<% @reportsList = [
+  "Динамика выполнения плана продаж",
+  "Динамика товарооборота в сопоставимых ценах",
+  "Товарно-групповая структура товарооборота",
+  "Структура товарооборота по формам оплаты",
+  "Структура товарооборота по формам торговли",
+  "Сезонность товарооборота",
+  "Средняя цена реализации товаров" ]
+%>
+
+
+
+<div class="ui grid">
+  <div class="row" />
+
+    <div class="row">
+    <div class="one wide column" />
+
+    <div class="fourteen wide column">
+
+
+            <div class="ui large menu">
+
+              <a class=" item">
+                <% if not @current_year.nil? %>
+                <div style="">
+                    @current_year
+                </div>
+                <% end %>
+              </a>
+
+          <a class=" item">
+            <div class="ui vertical divider"/>
+          </a>
+
+        <a class=" item">
+          <div class="ui simple dropdown item">
+            Год
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <div class="item">Choice 1</div>
+              <div class="item">Choice 2</div>
+              <div class="item">Choice 3</div>
+            </div>
+          </div>
+        </a>
+
+
+
+
+
+      </div>
+
+
+    </div>
+    </div>
+      <div class="one wide column" />
+
+</div>
