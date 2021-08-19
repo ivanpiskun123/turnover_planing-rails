@@ -1,7 +1,9 @@
 require "test_helper"
 
 class ProductGroupTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should not save product" do
+    p = ProductGroup.new
+    p.name='d'
+    assert_not p.save
+end
 end

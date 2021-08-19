@@ -1,6 +1,4 @@
 
-
-
 <div class="ui grid">
 
 
@@ -72,10 +70,10 @@
         </div>
 
 
-        <% if @current_year.nil? %>
-              <div class=" item" style="color: #dbdbdb; font-size: 120% ; display: none">
+        <% if ( not @current_year.nil? ) and   diplom_version  %>
+          <div class=" item" style="color: #dbdbdb; font-size: 120% ;">
         <% else %>
-              <div class=" item" style="color: #dbdbdb; font-size: 120% ;">
+            <div class=" item" style="color: #dbdbdb; font-size: 120% ; display: none">
         <% end %>
 
         <%= link_to "ABC-анализ", { controller: "pages", action: "abs_product_analysis", year: @current_year }, { class: "item", style: "color: #dbdbdb"} %>
