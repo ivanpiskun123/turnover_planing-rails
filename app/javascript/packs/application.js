@@ -15,5 +15,9 @@ ActiveStorage.start()
 
 //= require semantic-ui
 import '@doabit/semantic-ui-sass'
-
 import "chartkick/chart.js"
+
+require('jquery')
+
+import JQuery from 'jquery';
+ window.$ = window.JQuery = JQuery;

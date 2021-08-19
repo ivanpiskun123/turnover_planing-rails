@@ -24,12 +24,23 @@
     <%#      <% end %>
 
     <% if current_user %>
-      <%= render partial: 'shared/navigation' %>
-      <%= yield %>
+
+<div class="ui grid">
+
+        <div class="sixteen wide column">
+          <%= render partial: 'shared/navigation' %>
+          <%= yield %>
+    </div>
+
+      </div>
+
+      <% else %>
+        <%= yield %>
+
     <% end %>
 
 
-  <%= yield %>
+
 
 
 

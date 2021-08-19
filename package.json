@@ -14,7 +14,7 @@
     "apollo-link-error": "^1.1.13",
     "apollo-link-http": "^1.5.17",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-    "chart.js": "^3.5.0",
+    "chart.js": "^3.5.1",
     "chartkick": "^4.0.5",
     "graphql": "^15.5.1",
     "graphql-hooks": "^5.4.0",

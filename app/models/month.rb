@@ -58,12 +58,12 @@ class Month < ApplicationRecord
     Months::RussianMonths.new(self.date.month-1).call
   end
 
+
   private
 
   def date_to_month_start
     self.date = self.date.end_of_month
   end
-
 
 
 end

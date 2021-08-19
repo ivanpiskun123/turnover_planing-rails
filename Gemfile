@@ -68,3 +68,4 @@ gem 'devise-semantified', git: 'https://github.com/ajex13/devise-semantified.git
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 
 gem 'rack-cors'
+gem "chartkick"
